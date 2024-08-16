@@ -16,9 +16,8 @@
       This website is an archive.
       Please see
       <a href="https://github.com/ngi-nix/summer-of-nix">
-      https://github.com/ngi-nix/summer-of-nix
-      </a>
-      .
+        https://github.com/ngi-nix/summer-of-nix
+      </a>.
     </p>
     <header>
       <div>
@@ -26,7 +25,9 @@
         <nav style="display: none;">
           <ul>
             {% for link in config.extra.navbar.links -%}
-            <li{% if current_path == link.target %} class="active"{% endif %}><a href="{{ get_url(path=link.target) | safe }}">{{ link.title }}</a></li>
+            <li{% if current_path == link.target %} class="active"{% endif %}>
+              <a href="{{ get_url(path=link.target) | safe }}">{{ link.title }}</a>
+            </li>
             {%- endfor %}
           </ul>
         </nav>
@@ -42,25 +43,28 @@
           <section class="footer-copyright">
             <h4>NixOS</h4>
             <div>
+              <span>Copyright © 2024 NixOS contributors</span>
               <span>
-                Copyright © 2024 NixOS contributors
+                <a href="https://github.com/NixOS/nixos-summer#license">
+                  <abbr title="Creative Commons Attribution Share Alike 4.0 International">
+                    CC-BY-SA-4.0
+                  </abbr>, code samples public domain/CC0
+                </a>
               </span>
-              <span>
-              <a href="https://github.com/NixOS/nixos-summer#license">
-                <abbr title="Creative Commons Attribution Share Alike 4.0 International">
-                  CC-BY-SA-4.0<!-
-             --></abbr>,
-                code samples public domain/CC0
-              </a>
             </div>
           </section>
           <section class="footer-social">
             <h4>Connect with us</h4>
             <ul>
-              <li class="social-icon -twitter"><a href="https://twitter.com/nixos_org">Twitter</a></li>
-              <li class="social-icon -youtube"><a
-                  href="https://www.youtube.com/channel/UC3vIimi9q4AT8EgxYp_dWIw">Youtube</a></li>
-              <li class="social-icon -github"><a href="https://github.com/NixOS">GitHub</a></li>
+              <li class="social-icon -twitter">
+                <a href="https://twitter.com/nixos_org" target="_blank" rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li class="social-icon -youtube">
+                <a href="https://www.youtube.com/channel/UC3vIimi9q4AT8EgxYp_dWIw" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </li>
+              <li class="social-icon -github">
+                <a href="https://github.com/NixOS" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
             </ul>
           </section>
         </div>
